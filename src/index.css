@@ -1,0 +1,141 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    background:linear-gradient(-45deg,#ff6b6b,#f06595,#845ef7,#339af0);
+    background-size:400% 400%;
+    animation:gradientMovement 12s ease infinite;
+    padding:50px 20px;
+}
+
+.to-do-list{
+    width:100%;
+    max-width:850px;
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(15px);
+    padding:35px;
+    border-radius:25px;
+    box-shadow:0 15px 40px rgba(0,0,0,.25);
+}
+
+h1{
+    text-align:center;
+    font-size:4rem;
+    color:white;
+    margin-bottom:30px;
+    letter-spacing:2px;
+    text-shadow:0 5px 15px rgba(0,0,0,.3);
+}
+
+.input-container{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin-bottom:30px;
+}
+
+input[type="text"]{
+    flex:1;
+    font-size:1.2rem;
+    padding:15px 20px;
+    border:none;
+    border-radius:12px;
+    outline:none;
+    background:white;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+button{
+    border:none;
+    cursor:pointer;
+    color:white;
+    font-size:1rem;
+    font-weight:600;
+    padding:14px 20px;
+    border-radius:10px;
+    transition:.3s;
+}
+
+button:hover{
+    transform:translateY(-3px);
+}
+
+button:active{
+    transform:scale(.96);
+}
+
+.add-button{
+    background:#22c55e;
+}
+
+.add-button:hover{
+    background:#16a34a;
+}
+
+.delete-button{
+    background:#ef4444;
+}
+
+.delete-button:hover{
+    background:#dc2626;
+}
+
+.move-button{
+    background:#3b82f6;
+}
+
+.move-button:hover{
+    background:#2563eb;
+}
+
+ol{
+    list-style:none;
+}
+
+li{
+    display:flex;
+    align-items:center;
+    padding:18px 22px;
+    margin-bottom:18px;
+    background:white;
+    border-radius:16px;
+    box-shadow:0 10px 20px rgba(0,0,0,.12);
+    transition:.3s;
+}
+
+li:hover{
+    transform:translateY(-4px);
+    box-shadow:0 15px 30px rgba(0,0,0,.18);
+}
+
+.text{
+    flex:1;
+    font-size:1.5rem;
+    font-weight:600;
+    color:#333;
+}
+
+.delete-button,
+.move-button{
+    margin-left:10px;
+}
+
+@keyframes gradientMovement{
+    0%{
+        background-position:0% 50%;
+    }
+    50%{
+        background-position:100% 50%;
+    }
+    100%{
+        background-position:0% 50%;
+    }
+}
